@@ -1,0 +1,6 @@
+{
+  "name": "Pinocho Escape Room",
+  "description": "Escape Room educativo sobre el cuento de Pinocho para alumnos de 1º de Primaria (6-7 años). Incluye contenidos curriculares de matemáticas, lengua, valores y atención, tanto en modo digital interactivo como en formato listo para imprimir.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

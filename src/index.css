@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --color-vibrant-bg: #FFF9E6;
+  --color-vibrant-blue: #3B82F6;
+  --color-vibrant-yellow: #FBBF24;
+  --color-vibrant-red: #EF4444;
+  --color-vibrant-green: #10B981;
+  --color-vibrant-indigo: #6366F1;
+}
+
+body {
+  background-color: #FFF9E6;
+  color: #5C4033;
+}
+
+/* Custom CSS for seamless standard paper layouts when printing */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+
+  /* Hide normal layout blocks such as top header navigation, settings panels */
+  nav, 
+  header, 
+  button, 
+  .print\:hidden,
+  #chrono-timer-card,
+  #teacher-control-rail {
+    display: none !important;
+  }
+
+  /* Make target printable sheet fill up the printable frame */
+  #school-escape-print-container {
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    display: block !important;
+  }
+
+  /* Reset layout constraints to expand fully */
+  .max-w-4xl, .max-w-7xl, .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
